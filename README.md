@@ -41,6 +41,8 @@
 [![Email](https://img.shields.io/badge/Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mishrashriyansh@outlook.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://shriyanshportfolio.vercel.app/)
 
+---
+
 ### 📈 GitHub Stats
 
 <p align="center">
