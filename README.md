@@ -46,8 +46,6 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&theme=tokyonight" width="48%" />
-</p>
-<p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=tokyonight" width="48%" />
 </p>
 
