@@ -40,7 +40,6 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shriyansh-mishra-87a313374/)
 [![Email](https://img.shields.io/badge/Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mishrashriyansh@outlook.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://shriyanshportfolio.vercel.app/)
----
 
 ### 📈 GitHub Stats
 
