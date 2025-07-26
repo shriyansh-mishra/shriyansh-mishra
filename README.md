@@ -45,7 +45,7 @@
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&theme=tokyonight" width="47%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&theme=tokyonight&cache_seconds=30" width="47%" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=tokyonight" width="36%" />
 </p>
 
