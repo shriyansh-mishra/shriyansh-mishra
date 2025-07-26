@@ -45,7 +45,7 @@
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&count_private=true&theme=tokyonight" width="46%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&count_private=true&theme=tokyonight&count_private=true" width="46%" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=tokyonight" width="36%" />
 </p>
 
