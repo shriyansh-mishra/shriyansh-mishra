@@ -46,6 +46,6 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="47%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=nightowl" width="36%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=nightowl&count_private=true" width="36%" />
 </p>
 
