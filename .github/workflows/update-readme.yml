@@ -23,6 +23,7 @@ jobs:
       - name: Run Script
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
         run: python update-readme.py
 
       - name: Commit & Push
@@ -32,3 +33,5 @@ jobs:
           git add README.md
           git commit -m "Update GitHub Dashboard" || echo "No changes"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
