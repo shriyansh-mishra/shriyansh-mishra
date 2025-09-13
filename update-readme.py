@@ -2,6 +2,14 @@ import os
 import requests
 from collections import defaultdict
 
+# Try to load from .env file if it exists
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+    print("Loaded environment variables from .env file")
+except ImportError:
+    print("python-dotenv not installed, using system environment variables")
+
 # Load environment variables
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 USERNAME = os.getenv("GITHUB_USERNAME")
@@ -16,10 +24,22 @@ def fetch_repos():
     page = 1
     while True:
         url = f"{API_URL}/user/repos?per_page=100&page={page}&affiliation=owner"
-        res = requests.get(url, headers=HEADERS).json()
-        if not res:
+        res = requests.get(url, headers=HEADERS)
+        
+        # Check if request was successful
+        if res.status_code != 200:
+            print(f"Error fetching repos: {res.status_code} - {res.text}")
             break
-        repos.extend(res)
+            
+        try:
+            data = res.json()
+        except requests.exceptions.JSONDecodeError:
+            print(f"Error parsing JSON response: {res.text}")
+            break
+            
+        if not data:
+            break
+        repos.extend(data)
         page += 1
     return repos
 
@@ -28,7 +48,15 @@ def fetch_repos():
 def fetch_languages(repo_full_name):
     url = f"{API_URL}/repos/{repo_full_name}/languages"
     res = requests.get(url, headers=HEADERS)
-    return res.json() if res.status_code == 200 else {}
+    if res.status_code == 200:
+        try:
+            return res.json()
+        except requests.exceptions.JSONDecodeError:
+            print(f"Error parsing languages for {repo_full_name}: {res.text}")
+            return {}
+    else:
+        print(f"Error fetching languages for {repo_full_name}: {res.status_code} - {res.text}")
+        return {}
 
 
 # Fetch total commits across ALL repos by user
@@ -37,8 +65,14 @@ def fetch_total_commits(username):
     headers = {**HEADERS, "Accept": "application/vnd.github.cloak-preview"}
     res = requests.get(url, headers=headers)
     if res.status_code == 200:
-        return res.json().get("total_count", 0)
-    return 0
+        try:
+            return res.json().get("total_count", 0)
+        except requests.exceptions.JSONDecodeError:
+            print(f"Error parsing commits response: {res.text}")
+            return 0
+    else:
+        print(f"Error fetching commits: {res.status_code} - {res.text}")
+        return 0
 
 
 # Create progress bar for percentages
@@ -48,7 +82,26 @@ def make_progress_bar(percentage, size=20):
 
 
 def main():
+    # Debug information
+    print(f"GitHub Token present: {bool(GITHUB_TOKEN)}")
+    print(f"Username: {USERNAME}")
+    print(f"API URL: {API_URL}")
+    
+    if not GITHUB_TOKEN:
+        print("Error: GITHUB_TOKEN environment variable is not set!")
+        return
+    
+    if not USERNAME:
+        print("Error: GITHUB_USERNAME environment variable is not set!")
+        return
+    
     repos = fetch_repos()
+    print(f"Fetched {len(repos)} repositories")
+    
+    if not repos:
+        print("No repositories found. Check your token permissions.")
+        return
+    
     total_size = 0
     lang_stats = defaultdict(int)
     public_repos = 0
