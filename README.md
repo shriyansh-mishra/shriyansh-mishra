@@ -1,5 +1,12 @@
-##  Hi 👋🏻, I'm Shriyansh Mishra
+<div align="center">
+   <img width=100% src=https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true />
+</div>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Python+developer!;love+building+scalable+projects;AI/ML+enthusiast;Turning+coffee+to+code☕&font=Fira%20Code&center=true&width=380&height=50&duration=3000&pause=100" alt="Example Usage - README Typing SVG">
+</p>
 
+
+##  Hi 👋🏻, I'm Shriyansh Mishra
 - ### Turning coffee into code ☕
 
 ### Tech Stack
@@ -7,12 +14,9 @@
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -31,21 +35,24 @@
 ![matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-2D3E50?style=for-the-badge&logo=python&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-
+![Ollama](https://img.shields.io/badge/-Ollama-000000?logo=ollama&logoColor=white&style=for-the-badge)
 
 ### Connect with me:
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shriyansh-mishra-281919225/)
 [![Email](https://img.shields.io/badge/Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mishrashriyansh@outlook.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://shriyanshportfolio.vercel.app/)
 ---
 
-### 📈 GitHub Stats
+## 📊 GitHub Dashboard
+
+ <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="47%" />
+
+<!--START_SECTION:dashboard-->
+loading...
+<!--END_SECTION:dashboard-->
+
+
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="47%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shriyansh-mishra&layout=compact&theme=nightowl&count_private=true" width="36%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
 </p>
-
