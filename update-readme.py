@@ -136,12 +136,11 @@ def main():
     # Build stats section
     stats_section = [
         "## 📊 GitHub Dashboard\n",
-        f"- **Public Repos:** {public_repos}",
-        f"- **Private Repos:** {private_repos}",
-        f"- **Total Commits:** {total_commits}",
-        f"- **Total LOC (bytes counted):** {total_bytes:,}",
-        f"- **Storage Used:** {total_size/1024:.2f} MB\n",
-        "### 🖥️ Language Usage\n",
+        f"![Public Repos](https://img.shields.io/badge/Public%20Repos-{public_repos}-blue?style=for-the-badge&logo=github)",
+        f"![Private Repos](https://img.shields.io/badge/Private%20Repos-{private_repos}-lightgrey?style=for-the-badge&logo=github)",
+        f"![Total LOC](https://img.shields.io/badge/Total%20LOC-{total_bytes / 1000000:.2f}M-yellow?style=for-the-badge&logo=files)",
+        f"![Storage Used](https://img.shields.io/badge/Storage%20Used-{total_size / 1024:.2f}MB-orange?style=for-the-badge&logo=databricks)\n",
+    "### 🖥️ Language Usage\n",
         "| Language | % | Progress |\n|----------|----|-----------|\n"
     ]
 
