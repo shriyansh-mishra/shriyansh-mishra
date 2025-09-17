@@ -1,9 +1,9 @@
 <div align="center">
    <img width=100% src=https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true />
 </div>
-<p align="center">
+<!-- <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines=Python+developer!;love+building+scalable+projects;AI/ML+enthusiast;Turning+coffee+to+code☕&font=Fira%20Code&center=true&width=380&height=50&duration=3000&pause=100" alt="Example Usage - README Typing SVG">
-</p>
+</p> -->
 
 
 ##  Hi 👋🏻, I'm Shriyansh Mishra
@@ -45,14 +45,29 @@
 
 ## 📊 GitHub Dashboard
 
- <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="47%" />
+ <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="70%" />
 
 <!--START_SECTION:dashboard-->
-loading...
+
+- **Public Repos:** 18
+- **Private Repos:** 0
+- **Total LOC (bytes counted):** 1,270,089
+- **Storage Used:** 38.15 MB
+
+### 🖥️ Language Usage
+
+| Language         | %      | Progress                                |
+|------------------|--------|-----------------------------------------|
+| TypeScript       | 32.16% | ██████░░░░░░░░░░░░░░ 32.16%             |
+| JavaScript       | 20.04% | ████░░░░░░░░░░░░░░░░ 20.04%            |
+| Python           | 19.07% | ███░░░░░░░░░░░░░░░░░ 19.07%            |
+| Jupyter Notebook | 14.88% | ██░░░░░░░░░░░░░░░░░░ 14.88%            |
+| HTML             |  6.51% | █░░░░░░░░░░░░░░░░░░░ 6.51%             |
+| CSS              |  6.42% | █░░░░░░░░░░░░░░░░░░░ 6.42%             |
+
 <!--END_SECTION:dashboard-->
 
 
-
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=footer"/>
 </p>
