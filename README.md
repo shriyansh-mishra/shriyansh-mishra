@@ -48,23 +48,27 @@
  <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="70%" />
 
 <!--START_SECTION:dashboard-->
+## 📊 GitHub Dashboard
 
-- **Public Repos:** 18
-- **Private Repos:** 0
-- **Total LOC (bytes counted):** 1,270,089
-- **Storage Used:** 38.15 MB
+![Public Repos](https://img.shields.io/badge/Public%20Repos-18-blue?style=for-the-badge&logo=github)
+![Private Repos](https://img.shields.io/badge/Private%20Repos-0-lightgrey?style=for-the-badge&logo=github)
+![Total LOC](https://img.shields.io/badge/Total%20LOC-1.27M-yellow?style=for-the-badge&logo=files)
+![Storage Used](https://img.shields.io/badge/Storage%20Used-38.16MB-orange?style=for-the-badge&logo=databricks)
 
 ### 🖥️ Language Usage
 
-| Language         | %      | Progress                                |
-|------------------|--------|-----------------------------------------|
-| TypeScript       | 32.16% | ██████░░░░░░░░░░░░░░ 32.16%             |
-| JavaScript       | 20.04% | ████░░░░░░░░░░░░░░░░ 20.04%            |
-| Python           | 19.07% | ███░░░░░░░░░░░░░░░░░ 19.07%            |
-| Jupyter Notebook | 14.88% | ██░░░░░░░░░░░░░░░░░░ 14.88%            |
-| HTML             |  6.51% | █░░░░░░░░░░░░░░░░░░░ 6.51%             |
-| CSS              |  6.42% | █░░░░░░░░░░░░░░░░░░░ 6.42%             |
+| Language | % | Progress |
+|----------|----|-----------|
 
+| TypeScript | 32.11% | ██████░░░░░░░░░░░░░░ 32.11% |
+| JavaScript | 20.01% | ████░░░░░░░░░░░░░░░░ 20.01% |
+| Python | 19.19% | ███░░░░░░░░░░░░░░░░░ 19.19% |
+| Jupyter Notebook | 14.86% | ██░░░░░░░░░░░░░░░░░░ 14.86% |
+| HTML | 6.50% | █░░░░░░░░░░░░░░░░░░░ 6.50% |
+| CSS | 6.41% | █░░░░░░░░░░░░░░░░░░░ 6.41% |
+| Shell | 0.45% | ░░░░░░░░░░░░░░░░░░░░ 0.45% |
+| Batchfile | 0.44% | ░░░░░░░░░░░░░░░░░░░░ 0.44% |
+| Dockerfile | 0.02% | ░░░░░░░░░░░░░░░░░░░░ 0.02% |
 <!--END_SECTION:dashboard-->
 
 
