@@ -53,7 +53,7 @@
 ![Public Repos](https://img.shields.io/badge/Public%20Repos-18-blue?style=for-the-badge&logo=github)
 ![Private Repos](https://img.shields.io/badge/Private%20Repos-0-lightgrey?style=for-the-badge&logo=github)
 ![Total LOC](https://img.shields.io/badge/Total%20LOC-1.27M-yellow?style=for-the-badge&logo=files)
-![Storage Used](https://img.shields.io/badge/Storage%20Used-38.16MB-orange?style=for-the-badge&logo=databricks)
+![Storage Used](https://img.shields.io/badge/Storage%20Used-38.17MB-orange?style=for-the-badge&logo=databricks)
 
 ### 🖥️ Language Usage
 
