@@ -49,9 +49,8 @@
 </td>
 <td width="50%" align="center">
 
-![Public Repos](https://img.shields.io/badge/Public%20Repos-18-blue?style=flat-square&logo=github)
-![Private Repos](https://img.shields.io/badge/Private%20Repos-0-lightgrey?style=flat-square&logo=github)
-![Total LOC](https://img.shields.io/badge/Total%20Line%20of%20code-1.27M-yellow?style=flat-square&logo=files)
+![Public Repos](https://img.shields.io/badge/Public%20Repos-18-blue?style=flat-square&logo=github) ![Private Repos](https://img.shields.io/badge/Private%20Repos-0-lightgrey?style=flat-square&logo=github)
+![Total LOC](https://img.shields.io/badge/Total%20Line%20of%20code-1.27M-yellow?style=for-the-badge&logo=files)    
 ![Storage Used](https://img.shields.io/badge/Storage%20Used-38.17MB-orange?style=flat-square&logo=databricks)
 
 </td>
