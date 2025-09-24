@@ -127,7 +127,7 @@ def main():
     stats_section = [
         "## 📊 GitHub Dashboard\n",
         f"![Public Repos](https://img.shields.io/badge/Public%20Repos-{public_repos}-blue?style=for-the-badge&logo=github)",
-        f"![Private Repos](https://img.shields.io/badge/Private%20Repos-{private_repos}-lightgrey?style=for-the-badge&logo=github)",
+        f"![Private Repos](https://img.shields.io/badge/Private%20Repos-{9}-lightgrey?style=for-the-badge&logo=github)",
         f"![Total LOC](https://img.shields.io/badge/Total%20LOC-{total_bytes / 1000000:.2f}M-yellow?style=for-the-badge&logo=files)",
         f"![Storage Used](https://img.shields.io/badge/Storage%20Used-{total_size / 1024:.2f}MB-orange?style=for-the-badge&logo=databricks)\n",
     "### 🖥️ Language Usage\n",
