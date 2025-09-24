@@ -2,7 +2,6 @@ import os
 import requests
 from collections import defaultdict
 
-# Try to load from .env file if it exists
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -18,7 +17,6 @@ API_URL = "https://api.github.com"
 HEADERS = {"Authorization": f"token {GITHUB_TOKEN}"}
 
 
-# Fetch all repos owned by the user
 def fetch_repos():
     repos = []
     page = 1
@@ -26,7 +24,6 @@ def fetch_repos():
         url = f"{API_URL}/user/repos?per_page=100&page={page}&affiliation=owner"
         res = requests.get(url, headers=HEADERS)
         
-        # Check if request was successful
         if res.status_code != 200:
             print(f"Error fetching repos: {res.status_code} - {res.text}")
             break
@@ -44,7 +41,6 @@ def fetch_repos():
     return repos
 
 
-# Fetch language usage for a repo
 def fetch_languages(repo_full_name):
     url = f"{API_URL}/repos/{repo_full_name}/languages"
     res = requests.get(url, headers=HEADERS)
@@ -59,7 +55,6 @@ def fetch_languages(repo_full_name):
         return {}
 
 
-# Fetch total commits across ALL repos by user
 def fetch_total_commits(username):
     url = f"{API_URL}/search/commits?q=author:{username}"
     headers = {**HEADERS, "Accept": "application/vnd.github.cloak-preview"}
@@ -75,14 +70,12 @@ def fetch_total_commits(username):
         return 0
 
 
-# Create progress bar for percentages
-def make_progress_bar(percentage, size=20):
+def make_progress_bar(percentage, size=13):
     filled = int(size * percentage / 100)
     return "█" * filled + "░" * (size - filled)
 
 
 def main():
-    # Debug information
     print(f"GitHub Token present: {bool(GITHUB_TOKEN)}")
     print(f"Username: {USERNAME}")
     print(f"API URL: {API_URL}")
@@ -113,17 +106,14 @@ def main():
         else:
             public_repos += 1
 
-        total_size += repo["size"]  # Size is in KB
+        total_size += repo["size"]  
 
-        # Collect languages
         langs = fetch_languages(repo["full_name"])
         for lang, val in langs.items():
             lang_stats[lang] += val
 
-    # Calculate total commits with 1 API call
     total_commits = fetch_total_commits(USERNAME)
 
-    # Calculate language percentages
     total_bytes = sum(lang_stats.values())
     lang_percentages = {
         lang: (count / total_bytes) * 100 for lang, count in lang_stats.items()
