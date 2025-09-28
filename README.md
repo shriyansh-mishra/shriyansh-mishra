@@ -44,7 +44,7 @@
   <table>
     <tr>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="90%" />
+        <img src="https://github-readme-stats.vercel.app/api?username=shriyansh-mishra&show_icons=true&count_private=true&include_all_commits=true&theme=nightowl" width="95%" />
       </td>
       <td width="50%" align="center">
 
