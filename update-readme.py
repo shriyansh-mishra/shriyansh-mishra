@@ -1,4 +1,5 @@
 import os
+import re
 import requests
 from collections import defaultdict
 
@@ -23,17 +24,17 @@ def fetch_repos():
     while True:
         url = f"{API_URL}/user/repos?per_page=100&page={page}&affiliation=owner"
         res = requests.get(url, headers=HEADERS)
-        
+
         if res.status_code != 200:
             print(f"Error fetching repos: {res.status_code} - {res.text}")
             break
-            
+
         try:
             data = res.json()
         except requests.exceptions.JSONDecodeError:
             print(f"Error parsing JSON response: {res.text}")
             break
-            
+
         if not data:
             break
         repos.extend(data)
@@ -75,26 +76,35 @@ def make_progress_bar(percentage, size=13):
     return "█" * filled + "░" * (size - filled)
 
 
+def replace_badge_value(readme, badge_name, new_value):
+    """
+    Replace number inside a shields.io badge while keeping the rest intact.
+    Example: badge_name = "Public%20Repos"
+    """
+    pattern = rf'({badge_name}-)([0-9]+(\.[0-9]+)?)([A-Za-z%]*)'
+    return re.sub(pattern, rf'\1{new_value}\4', readme)
+
+
 def main():
     print(f"GitHub Token present: {bool(GITHUB_TOKEN)}")
     print(f"Username: {USERNAME}")
     print(f"API URL: {API_URL}")
-    
+
     if not GITHUB_TOKEN:
         print("Error: GITHUB_TOKEN environment variable is not set!")
         return
-    
+
     if not USERNAME:
         print("Error: GITHUB_USERNAME environment variable is not set!")
         return
-    
+
     repos = fetch_repos()
     print(f"Fetched {len(repos)} repositories")
-    
+
     if not repos:
         print("No repositories found. Check your token permissions.")
         return
-    
+
     total_size = 0
     lang_stats = defaultdict(int)
     public_repos = 0
@@ -106,7 +116,7 @@ def main():
         else:
             public_repos += 1
 
-        total_size += repo["size"]  
+        total_size += repo["size"]
 
         langs = fetch_languages(repo["full_name"])
         for lang, val in langs.items():
@@ -115,43 +125,39 @@ def main():
     total_commits = fetch_total_commits(USERNAME)
 
     total_bytes = sum(lang_stats.values())
-    lang_percentages = {
-        lang: (count / total_bytes) * 100 for lang, count in lang_stats.items()
-    } if total_bytes > 0 else {}
+    lang_percentages = (
+        {lang: (count / total_bytes) * 100 for lang, count in lang_stats.items()}
+        if total_bytes > 0
+        else {}
+    )
 
     # Read README.md
     with open("README.md", "r", encoding="utf-8") as f:
         readme = f.read()
 
-    # Build stats section
-    stats_section = [
-        "## 📊 GitHub Dashboard\n",
-        f"![Public Repos](https://img.shields.io/badge/Public%20Repos-{public_repos}-blue?style=for-the-badge&logo=github)",
-        f"![Private Repos](https://img.shields.io/badge/Private%20Repos-{9}-lightgrey?style=for-the-badge&logo=github)",
-        f"![Total LOC](https://img.shields.io/badge/Total%20LOC-{total_bytes / 1000000:.2f}M-yellow?style=for-the-badge&logo=files)",
-        f"![Storage Used](https://img.shields.io/badge/Storage%20Used-{total_size / 1024:.2f}MB-orange?style=for-the-badge&logo=databricks)\n",
-    "### 🖥️ Language Usage\n",
-        "| Language | % | Progress |\n|----------|----|-----------|\n"
-    ]
+    # --- Update badges ---
+    readme = replace_badge_value(readme, "Public%20Repos", str(public_repos))
+    readme = replace_badge_value(readme, "Private%20Repos", str(private_repos))
+    readme = replace_badge_value(readme, "Total%20Line%20of%20code", f"{total_bytes/1e6:.2f}M")
+    readme = replace_badge_value(readme, "Storage%20Used", f"{total_size/1024:.2f}MB")
 
-    for lang, percent in sorted(lang_percentages.items(), key=lambda x: x[1], reverse=True):
-        bar = make_progress_bar(percent)
-        stats_section.append(f"| {lang} | {percent:.2f}% | {bar} {percent:.2f}% |")
-
-    stats_content = "\n".join(stats_section)
-
-    # Replace old stats between markers
-    start_marker = "<!--START_SECTION:dashboard-->"
-    end_marker = "<!--END_SECTION:dashboard-->"
-    new_readme = (
-        readme.split(start_marker)[0]
-        + start_marker + "\n" + stats_content + "\n" + end_marker
-        + readme.split(end_marker)[-1]
+    # --- Update language usage table ---
+    table_pattern = re.compile(
+        r"(\| Language \| % \| Progress \|[\s\S]+?)(</div>|<!--END_SECTION:dashboard-->)"
     )
+
+    top5 = sorted(lang_percentages.items(), key=lambda x: x[1], reverse=True)[:5]
+
+    new_table = "| Language | % | Progress |\n|----------|---|---------|\n"
+    for lang, percent in top5:
+        bar = make_progress_bar(percent)
+        new_table += f"| {lang} | {percent:.2f}% | {bar} {percent:.2f}% |\n"
+
+    readme = table_pattern.sub(new_table + r"\2", readme)
 
     # Write back to README.md
     with open("README.md", "w", encoding="utf-8") as f:
-        f.write(new_readme)
+        f.write(readme)
 
 
 if __name__ == "__main__":
