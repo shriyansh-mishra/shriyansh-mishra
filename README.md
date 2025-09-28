@@ -1,14 +1,11 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true" />
+  <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&reversal=true" />
 </div>
 
-# Hi 👋🏻, I'm Shriyansh Mishra
+## Hi 👋🏻, I'm Shriyansh Mishra -
 ### Turning coffee into code ☕
 
----
-
-## 💻 Tech Stack
-
+### Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -35,16 +32,14 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Ollama](https://img.shields.io/badge/-Ollama-000000?logo=ollama&logoColor=white&style=for-the-badge)
 
----
-
-## 🔗 Connect with Me
-
+### Connect with me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shriyansh-mishra-281919225/)
 [![Email](https://img.shields.io/badge/Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mishrashriyansh@outlook.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://shriyanshportfolio.vercel.app/)
 
 ---
 
+<!--START_SECTION:dashboard-->
 ### 📊 GitHub Dashboard
 <div align="center">
   <table>
@@ -62,15 +57,15 @@
   </table>
 
   <h3>🖥️ Top 5 Language Usage</h3>
-
   | Language | % | Progress |
   |----------|---|---------|
-  | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) | 32.11% | ██████░░░░░░░ 32.11% |
+  | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)| 32.11% | ██████░░░░░░░ 32.11% |
   | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | 20.01% | ████░░░░░░░░░ 20.01% |
   | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | 19.19% | ███░░░░░░░░░░ 19.19% |
   | ![Jupyter Notebook](https://img.shields.io/badge/Jupyter%20Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white) | 14.86% | ██░░░░░░░░░░░ 14.86% |
   | ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white) | 6.50% | █░░░░░░░░░░░░ 6.50% |
 </div>
+<!--END_SECTION:dashboard-->
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=footer"/>
