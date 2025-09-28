@@ -77,12 +77,9 @@ def make_progress_bar(percentage, size=13):
 
 
 def replace_badge_value(readme, badge_name, new_value):
-    """
-    Replace number inside a shields.io badge while keeping the rest intact.
-    Example: badge_name = "Public%20Repos"
-    """
-    pattern = rf'({badge_name}-)([0-9]+(\.[0-9]+)?)([A-Za-z%]*)'
-    return re.sub(pattern, rf'\1{new_value}\4', readme)
+    pattern = rf'({badge_name}-)([0-9]+(?:\.[0-9]+)?)([A-Za-z%]*)'
+    return re.sub(pattern, lambda m: f"{m.group(1)}{new_value}{m.group(3)}", readme)
+
 
 
 def main():
